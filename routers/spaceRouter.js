@@ -58,6 +58,7 @@ router.delete("/delete/stories/:storyId", auth, async (req, res, next) => {
 // FEATURE 5 ADD A STORY TO SPACE AND DATABASE!!! /////////////
 /// POST /spaces/create/story/:id endpoint
 router.post("/create/story/:id", authMiddleware, async (req, res, next) => {
+  // router.post("/create/story/:id", async (req, res, next) => {
   const spaceId = parseInt(req.params.id);
   const { name, content, imageUrl } = req.body;
   console.log("the body", req.body);
